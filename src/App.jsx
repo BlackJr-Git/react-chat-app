@@ -18,7 +18,7 @@ function App() {
     const handleClick = () => {
         key = key + 1
         console.log(key);
-        let newMessage = <Message key={key} text={'Hey'} time={`${hours} : ${minutes}`}/>;
+        let newMessage = <Message key={key} text={'Salut tu vas bien ?'} time={`${hours} : ${minutes}`}/>;
         setComponents([...components, newMessage])
     }
 
