@@ -1,34 +1,33 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
+import User from './components/user'
+import MessageView from './components/message-view'
+import MessageEditor from './components/message-editor'
+import Message from "./components/message";
 
+
+let key = 1
 function App() {
-  const [count, setCount] = useState(0)
+  const time = new Date
+  const hours = time.getHours();
+  const minutes = time.getMinutes();
+  
+  const [components, setComponents] = useState([])
+  
+
+    const handleClick = () => {
+        key = key + 1
+        console.log(key);
+        let newMessage = <Message key={key} text={'Hey'} time={`${hours} : ${minutes}`}/>;
+        setComponents([...components, newMessage])
+    }
 
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <div className='container'>
+      <User />
+      <MessageView components={components} />
+      <MessageEditor handleClick={handleClick} />
+    </div>
   )
 }
 

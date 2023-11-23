@@ -1,4 +1,4 @@
-#root {
+/* #root {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
@@ -39,4 +39,104 @@
 
 .read-the-docs {
   color: #888;
+} */
+
+#root{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
+.container{
+  width: 400px;
+  height: 600px;
+  background-color: #1a1818;
+}
+
+.user{
+  background-color: #61dafbaa;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.message-view{
+  height: 470px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-end;
+  padding: 10px;
+  overflow: hidden;
+  border: 1px solid;
+  border-bottom: 1px solid #f5f5f5;
+  border-top: 1px solid #f5f5f5;
+}
+
+.message-editor{
+  height: 70px;
+  background-color:#61dafbaa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.send-button button{
+  width: 100px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background-color: #61dafbaa ;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.send-button button ion-icon{
+  color: #000;
+  font-size: 20px;
+}
+
+.message-input input{
+  height: 30px;
+  width: 250px;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  padding: 5px;
+}
+
+.message-input input:focus{
+  outline: blue 1px;
+  border: blue 1px;
+}
+
+.message{
+  background-color: #61dafbaa;
+  width: fit-content;
+  padding: 5px;
+  margin: 5px;
+  color: #f5f5f5;
+  font-family: sans-serif;
+  border-radius: 5px;
+  align-self: last baseline; 
+}
+
+.message-texte{
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.message-time{
+  font-size: 12px;
+}
+
+
