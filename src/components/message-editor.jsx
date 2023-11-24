@@ -4,10 +4,10 @@ import SendMessageButton from "./send-message-button";
 
 function MessageEditor({handleClick}) {
     return (
-        <div className="message-editor">
+        <form className="message-editor">
             <MessageEditorInput />
             <SendMessageButton handleClick={handleClick} />
-        </div>
+        </form>
     )
 }
 

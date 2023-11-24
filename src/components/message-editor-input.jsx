@@ -6,7 +6,7 @@ function MessageEditorInput() {
 
     return (
         <div className="message-input">
-            <input type="text" name="message" placeholder="Message" />
+            <input type="text" name="message" placeholder="Message"  />
         </div>
     )
 

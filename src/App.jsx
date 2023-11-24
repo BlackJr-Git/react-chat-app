@@ -6,7 +6,7 @@ import MessageEditor from './components/message-editor'
 import Message from "./components/message";
 
 
-let key = 1
+let key = 0
 function App() {
   const time = new Date
   const hours = time.getHours();
@@ -15,10 +15,11 @@ function App() {
   const [components, setComponents] = useState([])
   
 
-    const handleClick = () => {
+    const handleClick = (e) => {
+        e.preventDefault() ; 
         key = key + 1
         console.log(key);
-        let newMessage = <Message key={key} text={'Salut tu vas bien ?'} time={`${hours} : ${minutes}`}/>;
+        let newMessage = <Message key={key} text={"coucou !"} time={`${hours} : ${minutes}`}/>;
         setComponents([...components, newMessage])
     }
 

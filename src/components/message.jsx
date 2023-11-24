@@ -8,4 +8,4 @@ function Message({text,time}) {
     )
 }
 
-export default Message ;
+export default Message ; 
