@@ -9,7 +9,7 @@ import Message from "./components/message";
 let key = 0
 function App() {
   
-  const time = new Date
+  const time = new Date ;
   const hours = time.getHours();
   const minutes = time.getMinutes();
   const [components, setComponents] = useState([])
@@ -19,7 +19,7 @@ function App() {
     const handleClick = (e) => {
         e.preventDefault() ; 
         key = key + 1
-        console.log(key);
+        // console.log(key);
         let newMessage = <Message key={key} text={"Je vais bien et toi ?"} user={selectedValue} time={`${hours} : ${minutes}`}/>;
         setComponents([...components, newMessage])
     }
