@@ -1,7 +1,7 @@
-function User() {
+function User({selectValue, handleChange}) {
   return (
     <div className="user">
-      <select name="" id="">
+      <select name="" value={selectValue} onChange={handleChange} id="">
         <option value="Junior">Junior</option>
         <option value="Richard">Richard</option>
       </select>

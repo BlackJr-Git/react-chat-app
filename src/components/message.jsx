@@ -1,5 +1,5 @@
 function Message({ text, time, user }) {
-  if (user === true) {
+  if (user === 'Junior') {
     return (
       <div className="message">
         <p className="message-texte"> {text} </p>
