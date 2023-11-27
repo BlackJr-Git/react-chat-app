@@ -19,7 +19,7 @@ function App() {
         e.preventDefault() ; 
         key = key + 1
         console.log(key);
-        let newMessage = <Message key={key} text={"coucou !"} time={`${hours} : ${minutes}`}/>;
+        let newMessage = <Message key={key} text={"Je vais bien et toi ?"} user={true} time={`${hours} : ${minutes}`}/>;
         setComponents([...components, newMessage])
     }
 
