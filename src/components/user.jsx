@@ -1,10 +1,9 @@
-
 function User() {
-    return (
-        <div className="user">
-            <input type="checkbox" name="" id="" />
-        </div>
-    )
+  return (
+    <div className="user">
+      <input type="checkbox" name="" id="" />
+    </div>
+  );
 }
 
-export default User ; 
+export default User;
