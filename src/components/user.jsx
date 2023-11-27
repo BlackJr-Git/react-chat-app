@@ -1,7 +1,10 @@
 function User() {
   return (
     <div className="user">
-      <input type="checkbox" name="" id="" />
+      <select name="" id="">
+        <option value="Junior">Junior</option>
+        <option value="Richard">Richard</option>
+      </select>
     </div>
   );
 }
