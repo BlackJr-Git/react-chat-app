@@ -1,13 +1,23 @@
 import { useState } from "react";
 
-function MessageEditorInput() {
-  const [message, setMessage] = useState("");
+function MessageEditorInput({getMessage} ) {
+  // const [message, setMessage] = useState("");
 
   return (
     <div className="message-input">
-      <input type="text" name="message" placeholder="Message" />
+      < input 
+      // value={} 
+      
+      // onChange={(e) => {
+      //   setMessage(e.target.value)
+      // } } 
+
+      onChange={getMessage} 
+        
+        type="text" name="message" placeholder="Message" />
     </div>
   );
 }
 
-export default MessageEditorInput;
+export default MessageEditorInput ; 
+

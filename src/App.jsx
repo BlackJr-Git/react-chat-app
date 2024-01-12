@@ -14,25 +14,30 @@ function App() {
   const minutes = time.getMinutes();
   const [components, setComponents] = useState([])
   const [selectedValue, setSelectedValue] = useState('')
+  const [message, setMessage] = useState('')
   
 
     const handleClick = (e) => {
         e.preventDefault() ; 
         key = key + 1
-        // console.log(key);
-        let newMessage = <Message key={key} text={"Je vais bien et toi ?"} user={selectedValue} time={`${hours} : ${minutes}`}/>;
+        let newMessage = <Message key={key} text={message} user={selectedValue} time={`${hours} : ${minutes}`}/>;
         setComponents([...components, newMessage])
     }
 
-    const handleSelectChange = (event) => {
-      setSelectedValue(event.target.value);
+    const handleSelectChange = (e) => {
+      setSelectedValue(e.target.value);
     };
+
+    const handleMessageChange = (e) => {
+      setMessage(e.target.value)
+      console.log(e.target.value);
+    }
 
   return (
     <div className='container'>
       <User handleChange={handleSelectChange} />
       <MessageView components={components} />
-      <MessageEditor handleClick={handleClick} />
+      <MessageEditor handleClick={handleClick} getMessage={handleMessageChange} />
     </div>
   )
 }
